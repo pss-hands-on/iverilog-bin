@@ -3,7 +3,7 @@
 cwd=$(pwd)
 
 if test "x${CONTAINER}" != "x"; then
-    yum install -y flex bison gperf autoconf
+    yum install -y flex bison gperf autoconf wget
 fi
 
 if test "x${TARGET}" = "x"; then
