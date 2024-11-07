@@ -13,6 +13,7 @@ jobs:
             - uses: actions/checkout@v4
             - name: Build packages
               env:
+                BUILD_NUM: ${{ github.run_id }}
                 CONTAINER: 1
                 TARGET: manylinux2014
               run: >
@@ -20,6 +21,7 @@ jobs:
                 --volume "$(pwd):/io"
                 --env CONTAINER
                 --env BUILD_NUM
+                --env TARGET
                 --workdir /io
                 quay.io/pypa/manylinux2014_x86_64
                 /io/scripts/build_linux.sh
