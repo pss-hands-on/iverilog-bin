@@ -2,11 +2,11 @@
 
 cwd=$(pwd)
 
-if "x${CONTAINER}" != "x"; then
+if test "x${CONTAINER}" != "x"; then
     yum install -y flex bison gperf autoconf
 fi
 
-if "x${TARGET}" = "x"; then
+if test "x${TARGET}" = "x"; then
     TARGET=linux
 fi
 
