@@ -44,3 +44,6 @@ cd ${cwd}
 
 tar czf iverilog-${TARGET}-${iverilog_version}.tar.gz iverilog-${TARGET}-${iverilog_version}
 if test $? -ne 0; then exit 1; fi
+
+pwd
+ls
